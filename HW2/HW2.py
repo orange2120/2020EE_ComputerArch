@@ -1,3 +1,4 @@
+import math
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -34,3 +35,16 @@ fig, (ax1, ax2) = plt.subplots(1, 2)
 ax1.imshow(img)
 ax2.imshow(img_o)
 plt.show()
+
+np.savetxt('after_filter.txt', data_o, fmt='%5d')
+
+rmse_ans = 0.0
+
+dim_x, dim_y = data_i.shape
+
+for i in range(0, dim_y):
+	for j in range(0, dim_x):
+		rmse_ans += (data_i[i][j] - data_o[i][j]) ** 2
+rmse_ans = math.sqrt(rmse_ans / data_i.size)
+
+print(rmse_ans)
