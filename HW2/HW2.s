@@ -3,7 +3,7 @@
   str2: .string	" * "
   str3: .string	"\nRMSE = "
   str4: .string "\n"
-  str5: .string "\t"
+  str5: .string ",\t"
   str6: .string "\ndone."
 
 
