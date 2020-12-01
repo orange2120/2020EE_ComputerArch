@@ -40,3 +40,5 @@ No.  Inst  func7    func3 opcode
 22   OR    0000000  100   0110011
 23   AND   0000000  111   0110011
 ```
+
+## HW4 Verilog RISC-V controller
