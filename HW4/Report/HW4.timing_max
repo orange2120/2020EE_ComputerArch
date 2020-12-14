@@ -1,0 +1,325 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : HW4
+Version: N-2017.09-SP2
+Date   : Mon Dec 14 02:07:32 2020
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: mem_addr_I_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_3_/CK (DFFRX2)            0.00       0.50 r
+  mem_addr_I_reg_3_/Q (DFFRX2)             0.26       0.76 r
+  add_46/A[1] (HW4_DW01_inc_0)             0.00       0.76 r
+  add_46/U1_1_1/CO (ADDHX1)                0.17       0.93 r
+  add_46/U1_1_2/CO (ADDHX2)                0.13       1.07 r
+  add_46/U1_1_3/CO (ADDHX2)                0.14       1.20 r
+  add_46/U1_1_4/CO (ADDHX4)                0.10       1.31 r
+  add_46/U1_1_5/CO (ADDHX2)                0.13       1.44 r
+  add_46/U1_1_6/CO (ADDHX4)                0.10       1.54 r
+  add_46/U1_1_7/CO (ADDHX2)                0.13       1.67 r
+  add_46/U1_1_8/CO (ADDHX4)                0.10       1.77 r
+  add_46/U1_1_9/CO (ADDHX2)                0.13       1.90 r
+  add_46/U1_1_10/CO (ADDHX4)               0.10       2.01 r
+  add_46/U1_1_11/CO (ADDHX2)               0.13       2.13 r
+  add_46/U1_1_12/CO (ADDHX4)               0.10       2.24 r
+  add_46/U1_1_13/CO (ADDHX2)               0.10       2.34 r
+  add_46/U1_1_14/CO (ADDHXL)               0.20       2.54 r
+  add_46/U1_1_15/CO (ADDHXL)               0.21       2.75 r
+  add_46/U1_1_16/CO (ADDHXL)               0.21       2.97 r
+  add_46/U1_1_17/CO (ADDHXL)               0.21       3.18 r
+  add_46/U1_1_18/CO (ADDHXL)               0.21       3.40 r
+  add_46/U1_1_19/CO (ADDHXL)               0.21       3.61 r
+  add_46/U1_1_20/CO (ADDHXL)               0.21       3.83 r
+  add_46/U1_1_21/CO (ADDHXL)               0.21       4.04 r
+  add_46/U1_1_22/CO (ADDHXL)               0.21       4.26 r
+  add_46/U1_1_23/CO (ADDHXL)               0.23       4.49 r
+  add_46/U1_1_24/CO (ADDHX1)               0.19       4.68 r
+  add_46/U1_1_25/CO (CMPR22X2)             0.14       4.82 r
+  add_46/U1_1_26/CO (CMPR22X2)             0.12       4.94 r
+  add_46/U1_1_27/CO (ADDHX2)               0.12       5.06 r
+  add_46/U1_1_28/CO (ADDHX2)               0.11       5.17 r
+  add_46/U1/Y (XOR2X2)                     0.09       5.26 r
+  add_46/SUM[29] (HW4_DW01_inc_0)          0.00       5.26 r
+  mem_addr_I_reg_31_/D (DFFRX2)            0.00       5.26 r
+  data arrival time                                   5.26
+
+  clock CLK (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.50       5.50
+  clock uncertainty                       -0.10       5.40
+  mem_addr_I_reg_31_/CK (DFFRX2)           0.00       5.40 r
+  library setup time                      -0.10       5.30
+  data required time                                  5.30
+  -----------------------------------------------------------
+  data required time                                  5.30
+  data arrival time                                  -5.26
+  -----------------------------------------------------------
+  slack (MET)                                         0.03
+
+
+  Startpoint: mem_addr_I_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_30_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_3_/CK (DFFRX2)            0.00       0.50 r
+  mem_addr_I_reg_3_/Q (DFFRX2)             0.26       0.76 r
+  add_46/A[1] (HW4_DW01_inc_0)             0.00       0.76 r
+  add_46/U1_1_1/CO (ADDHX1)                0.17       0.93 r
+  add_46/U1_1_2/CO (ADDHX2)                0.13       1.07 r
+  add_46/U1_1_3/CO (ADDHX2)                0.14       1.20 r
+  add_46/U1_1_4/CO (ADDHX4)                0.10       1.31 r
+  add_46/U1_1_5/CO (ADDHX2)                0.13       1.44 r
+  add_46/U1_1_6/CO (ADDHX4)                0.10       1.54 r
+  add_46/U1_1_7/CO (ADDHX2)                0.13       1.67 r
+  add_46/U1_1_8/CO (ADDHX4)                0.10       1.77 r
+  add_46/U1_1_9/CO (ADDHX2)                0.13       1.90 r
+  add_46/U1_1_10/CO (ADDHX4)               0.10       2.01 r
+  add_46/U1_1_11/CO (ADDHX2)               0.13       2.13 r
+  add_46/U1_1_12/CO (ADDHX4)               0.10       2.24 r
+  add_46/U1_1_13/CO (ADDHX2)               0.10       2.34 r
+  add_46/U1_1_14/CO (ADDHXL)               0.20       2.54 r
+  add_46/U1_1_15/CO (ADDHXL)               0.21       2.75 r
+  add_46/U1_1_16/CO (ADDHXL)               0.21       2.97 r
+  add_46/U1_1_17/CO (ADDHXL)               0.21       3.18 r
+  add_46/U1_1_18/CO (ADDHXL)               0.21       3.40 r
+  add_46/U1_1_19/CO (ADDHXL)               0.21       3.61 r
+  add_46/U1_1_20/CO (ADDHXL)               0.21       3.83 r
+  add_46/U1_1_21/CO (ADDHXL)               0.21       4.04 r
+  add_46/U1_1_22/CO (ADDHXL)               0.21       4.26 r
+  add_46/U1_1_23/CO (ADDHXL)               0.23       4.49 r
+  add_46/U1_1_24/CO (ADDHX1)               0.19       4.68 r
+  add_46/U1_1_25/CO (CMPR22X2)             0.14       4.82 r
+  add_46/U1_1_26/CO (CMPR22X2)             0.12       4.94 r
+  add_46/U1_1_27/CO (ADDHX2)               0.12       5.06 r
+  add_46/U1_1_28/S (ADDHX2)                0.09       5.15 f
+  add_46/SUM[28] (HW4_DW01_inc_0)          0.00       5.15 f
+  mem_addr_I_reg_30_/D (DFFRX1)            0.00       5.15 f
+  data arrival time                                   5.15
+
+  clock CLK (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.50       5.50
+  clock uncertainty                       -0.10       5.40
+  mem_addr_I_reg_30_/CK (DFFRX1)           0.00       5.40 r
+  library setup time                      -0.13       5.27
+  data required time                                  5.27
+  -----------------------------------------------------------
+  data required time                                  5.27
+  data arrival time                                  -5.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.12
+
+
+  Startpoint: mem_addr_I_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_29_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_3_/CK (DFFRX2)            0.00       0.50 r
+  mem_addr_I_reg_3_/Q (DFFRX2)             0.26       0.76 r
+  add_46/A[1] (HW4_DW01_inc_0)             0.00       0.76 r
+  add_46/U1_1_1/CO (ADDHX1)                0.17       0.93 r
+  add_46/U1_1_2/CO (ADDHX2)                0.13       1.07 r
+  add_46/U1_1_3/CO (ADDHX2)                0.14       1.20 r
+  add_46/U1_1_4/CO (ADDHX4)                0.10       1.31 r
+  add_46/U1_1_5/CO (ADDHX2)                0.13       1.44 r
+  add_46/U1_1_6/CO (ADDHX4)                0.10       1.54 r
+  add_46/U1_1_7/CO (ADDHX2)                0.13       1.67 r
+  add_46/U1_1_8/CO (ADDHX4)                0.10       1.77 r
+  add_46/U1_1_9/CO (ADDHX2)                0.13       1.90 r
+  add_46/U1_1_10/CO (ADDHX4)               0.10       2.01 r
+  add_46/U1_1_11/CO (ADDHX2)               0.13       2.13 r
+  add_46/U1_1_12/CO (ADDHX4)               0.10       2.24 r
+  add_46/U1_1_13/CO (ADDHX2)               0.10       2.34 r
+  add_46/U1_1_14/CO (ADDHXL)               0.20       2.54 r
+  add_46/U1_1_15/CO (ADDHXL)               0.21       2.75 r
+  add_46/U1_1_16/CO (ADDHXL)               0.21       2.97 r
+  add_46/U1_1_17/CO (ADDHXL)               0.21       3.18 r
+  add_46/U1_1_18/CO (ADDHXL)               0.21       3.40 r
+  add_46/U1_1_19/CO (ADDHXL)               0.21       3.61 r
+  add_46/U1_1_20/CO (ADDHXL)               0.21       3.83 r
+  add_46/U1_1_21/CO (ADDHXL)               0.21       4.04 r
+  add_46/U1_1_22/CO (ADDHXL)               0.21       4.26 r
+  add_46/U1_1_23/CO (ADDHXL)               0.23       4.49 r
+  add_46/U1_1_24/CO (ADDHX1)               0.19       4.68 r
+  add_46/U1_1_25/CO (CMPR22X2)             0.14       4.82 r
+  add_46/U1_1_26/CO (CMPR22X2)             0.12       4.94 r
+  add_46/U1_1_27/S (ADDHX2)                0.09       5.03 f
+  add_46/SUM[27] (HW4_DW01_inc_0)          0.00       5.03 f
+  mem_addr_I_reg_29_/D (DFFRX1)            0.00       5.03 f
+  data arrival time                                   5.03
+
+  clock CLK (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.50       5.50
+  clock uncertainty                       -0.10       5.40
+  mem_addr_I_reg_29_/CK (DFFRX1)           0.00       5.40 r
+  library setup time                      -0.13       5.27
+  data required time                                  5.27
+  -----------------------------------------------------------
+  data required time                                  5.27
+  data arrival time                                  -5.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.24
+
+
+  Startpoint: mem_addr_I_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_28_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_3_/CK (DFFRX2)            0.00       0.50 r
+  mem_addr_I_reg_3_/Q (DFFRX2)             0.26       0.76 r
+  add_46/A[1] (HW4_DW01_inc_0)             0.00       0.76 r
+  add_46/U1_1_1/CO (ADDHX1)                0.17       0.93 r
+  add_46/U1_1_2/CO (ADDHX2)                0.13       1.07 r
+  add_46/U1_1_3/CO (ADDHX2)                0.14       1.20 r
+  add_46/U1_1_4/CO (ADDHX4)                0.10       1.31 r
+  add_46/U1_1_5/CO (ADDHX2)                0.13       1.44 r
+  add_46/U1_1_6/CO (ADDHX4)                0.10       1.54 r
+  add_46/U1_1_7/CO (ADDHX2)                0.13       1.67 r
+  add_46/U1_1_8/CO (ADDHX4)                0.10       1.77 r
+  add_46/U1_1_9/CO (ADDHX2)                0.13       1.90 r
+  add_46/U1_1_10/CO (ADDHX4)               0.10       2.01 r
+  add_46/U1_1_11/CO (ADDHX2)               0.13       2.13 r
+  add_46/U1_1_12/CO (ADDHX4)               0.10       2.24 r
+  add_46/U1_1_13/CO (ADDHX2)               0.10       2.34 r
+  add_46/U1_1_14/CO (ADDHXL)               0.20       2.54 r
+  add_46/U1_1_15/CO (ADDHXL)               0.21       2.75 r
+  add_46/U1_1_16/CO (ADDHXL)               0.21       2.97 r
+  add_46/U1_1_17/CO (ADDHXL)               0.21       3.18 r
+  add_46/U1_1_18/CO (ADDHXL)               0.21       3.40 r
+  add_46/U1_1_19/CO (ADDHXL)               0.21       3.61 r
+  add_46/U1_1_20/CO (ADDHXL)               0.21       3.83 r
+  add_46/U1_1_21/CO (ADDHXL)               0.21       4.04 r
+  add_46/U1_1_22/CO (ADDHXL)               0.21       4.26 r
+  add_46/U1_1_23/CO (ADDHXL)               0.23       4.49 r
+  add_46/U1_1_24/CO (ADDHX1)               0.19       4.68 r
+  add_46/U1_1_25/CO (CMPR22X2)             0.14       4.82 r
+  add_46/U1_1_26/S (CMPR22X2)              0.09       4.91 f
+  add_46/SUM[26] (HW4_DW01_inc_0)          0.00       4.91 f
+  mem_addr_I_reg_28_/D (DFFRX1)            0.00       4.91 f
+  data arrival time                                   4.91
+
+  clock CLK (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.50       5.50
+  clock uncertainty                       -0.10       5.40
+  mem_addr_I_reg_28_/CK (DFFRX1)           0.00       5.40 r
+  library setup time                      -0.13       5.27
+  data required time                                  5.27
+  -----------------------------------------------------------
+  data required time                                  5.27
+  data arrival time                                  -4.91
+  -----------------------------------------------------------
+  slack (MET)                                         0.36
+
+
+  Startpoint: mem_addr_I_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_27_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_3_/CK (DFFRX2)            0.00       0.50 r
+  mem_addr_I_reg_3_/Q (DFFRX2)             0.26       0.76 r
+  add_46/A[1] (HW4_DW01_inc_0)             0.00       0.76 r
+  add_46/U1_1_1/CO (ADDHX1)                0.17       0.93 r
+  add_46/U1_1_2/CO (ADDHX2)                0.13       1.07 r
+  add_46/U1_1_3/CO (ADDHX2)                0.14       1.20 r
+  add_46/U1_1_4/CO (ADDHX4)                0.10       1.31 r
+  add_46/U1_1_5/CO (ADDHX2)                0.13       1.44 r
+  add_46/U1_1_6/CO (ADDHX4)                0.10       1.54 r
+  add_46/U1_1_7/CO (ADDHX2)                0.13       1.67 r
+  add_46/U1_1_8/CO (ADDHX4)                0.10       1.77 r
+  add_46/U1_1_9/CO (ADDHX2)                0.13       1.90 r
+  add_46/U1_1_10/CO (ADDHX4)               0.10       2.01 r
+  add_46/U1_1_11/CO (ADDHX2)               0.13       2.13 r
+  add_46/U1_1_12/CO (ADDHX4)               0.10       2.24 r
+  add_46/U1_1_13/CO (ADDHX2)               0.10       2.34 r
+  add_46/U1_1_14/CO (ADDHXL)               0.20       2.54 r
+  add_46/U1_1_15/CO (ADDHXL)               0.21       2.75 r
+  add_46/U1_1_16/CO (ADDHXL)               0.21       2.97 r
+  add_46/U1_1_17/CO (ADDHXL)               0.21       3.18 r
+  add_46/U1_1_18/CO (ADDHXL)               0.21       3.40 r
+  add_46/U1_1_19/CO (ADDHXL)               0.21       3.61 r
+  add_46/U1_1_20/CO (ADDHXL)               0.21       3.83 r
+  add_46/U1_1_21/CO (ADDHXL)               0.21       4.04 r
+  add_46/U1_1_22/CO (ADDHXL)               0.21       4.26 r
+  add_46/U1_1_23/CO (ADDHXL)               0.23       4.49 r
+  add_46/U1_1_24/CO (ADDHX1)               0.19       4.68 r
+  add_46/U1_1_25/S (CMPR22X2)              0.12       4.80 f
+  add_46/SUM[25] (HW4_DW01_inc_0)          0.00       4.80 f
+  mem_addr_I_reg_27_/D (DFFRX1)            0.00       4.80 f
+  data arrival time                                   4.80
+
+  clock CLK (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.50       5.50
+  clock uncertainty                       -0.10       5.40
+  mem_addr_I_reg_27_/CK (DFFRX1)           0.00       5.40 r
+  library setup time                      -0.13       5.27
+  data required time                                  5.27
+  -----------------------------------------------------------
+  data required time                                  5.27
+  data arrival time                                  -4.80
+  -----------------------------------------------------------
+  slack (MET)                                         0.47
+
+
+1

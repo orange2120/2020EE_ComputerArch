@@ -1,0 +1,185 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 5
+Design : HW4
+Version: N-2017.09-SP2
+Date   : Mon Dec 14 02:07:32 2020
+****************************************
+
+Operating Conditions: fast   Library: fast
+Wire Load Model Mode: top
+
+  Startpoint: mem_rdata_I[19]
+              (input port clocked by CLK)
+  Endpoint: immediate_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     0.10       0.60 r
+  mem_rdata_I[19] (in)                     0.01       0.61 r
+  U237/Y (OAI2BB1X1)                       0.13       0.74 r
+  immediate_reg_19_/D (DFFRHQX1)           0.00       0.74 r
+  data arrival time                                   0.74
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  immediate_reg_19_/CK (DFFRHQX1)          0.00       0.60 r
+  library hold time                       -0.04       0.56
+  data required time                                  0.56
+  -----------------------------------------------------------
+  data required time                                  0.56
+  data arrival time                                  -0.74
+  -----------------------------------------------------------
+  slack (MET)                                         0.18
+
+
+  Startpoint: mem_rdata_I[18]
+              (input port clocked by CLK)
+  Endpoint: immediate_reg_18_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     0.10       0.60 r
+  mem_rdata_I[18] (in)                     0.01       0.61 r
+  U236/Y (OAI2BB1X1)                       0.13       0.74 r
+  immediate_reg_18_/D (DFFRHQX1)           0.00       0.74 r
+  data arrival time                                   0.74
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  immediate_reg_18_/CK (DFFRHQX1)          0.00       0.60 r
+  library hold time                       -0.04       0.56
+  data required time                                  0.56
+  -----------------------------------------------------------
+  data required time                                  0.56
+  data arrival time                                  -0.74
+  -----------------------------------------------------------
+  slack (MET)                                         0.18
+
+
+  Startpoint: mem_rdata_I[17]
+              (input port clocked by CLK)
+  Endpoint: immediate_reg_17_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     0.10       0.60 r
+  mem_rdata_I[17] (in)                     0.01       0.61 r
+  U235/Y (OAI2BB1X1)                       0.13       0.74 r
+  immediate_reg_17_/D (DFFRHQX1)           0.00       0.74 r
+  data arrival time                                   0.74
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  immediate_reg_17_/CK (DFFRHQX1)          0.00       0.60 r
+  library hold time                       -0.04       0.56
+  data required time                                  0.56
+  -----------------------------------------------------------
+  data required time                                  0.56
+  data arrival time                                  -0.74
+  -----------------------------------------------------------
+  slack (MET)                                         0.18
+
+
+  Startpoint: mem_rdata_I[16]
+              (input port clocked by CLK)
+  Endpoint: immediate_reg_16_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     0.10       0.60 r
+  mem_rdata_I[16] (in)                     0.01       0.61 r
+  U234/Y (OAI2BB1X1)                       0.13       0.74 r
+  immediate_reg_16_/D (DFFRHQX1)           0.00       0.74 r
+  data arrival time                                   0.74
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  immediate_reg_16_/CK (DFFRHQX1)          0.00       0.60 r
+  library hold time                       -0.04       0.56
+  data required time                                  0.56
+  -----------------------------------------------------------
+  data required time                                  0.56
+  data arrival time                                  -0.74
+  -----------------------------------------------------------
+  slack (MET)                                         0.18
+
+
+  Startpoint: mem_rdata_I[15]
+              (input port clocked by CLK)
+  Endpoint: immediate_reg_15_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  HW4                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     0.10       0.60 r
+  mem_rdata_I[15] (in)                     0.01       0.61 r
+  U233/Y (OAI2BB1X1)                       0.13       0.74 r
+  immediate_reg_15_/D (DFFRHQX1)           0.00       0.74 r
+  data arrival time                                   0.74
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  immediate_reg_15_/CK (DFFRHQX1)          0.00       0.60 r
+  library hold time                       -0.04       0.56
+  data required time                                  0.56
+  -----------------------------------------------------------
+  data required time                                  0.56
+  data arrival time                                  -0.74
+  -----------------------------------------------------------
+  slack (MET)                                         0.18
+
+
+1

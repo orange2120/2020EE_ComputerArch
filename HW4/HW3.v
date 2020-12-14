@@ -1,22 +1,19 @@
 module HW3(clk,
             rst_n,
             // for mem_I
-            mem_addr_I,
+            // mem_addr_I,
             mem_rdata_I,
 			// for result output
 			instruction_type,
 			instruction_format,
 			);
 
-    input         clk, rst_n        ;
-    output reg [31:2] mem_addr_I        ;
+    input      clk, rst_n        ;
+    // input      rst_n        ;
+    // output [31:2] mem_addr_I        ;
     input  [31:0] mem_rdata_I       ;
 	output reg [22:0] instruction_type  ;
 	output reg [ 4:0] instruction_format;
-
-    reg [31:2] mem_addr_reg;
-    reg [22:0] instruction_type_reg;
-    reg [4:0]  instruction_format_reg;
 
     wire [2:0] func3 = mem_rdata_I[14:12];
     wire [6:0] func7 = mem_rdata_I[31:25];
@@ -26,6 +23,7 @@ module HW3(clk,
     parameter JALR = {1'b0, 1'b1, 21'b0};
     parameter BEQ  = {2'b0, 1'b1, 20'b0};
     parameter BNE  = {3'b0, 1'b1, 19'b0};
+    parameter LD   = {4'b0, 1'b1, 18'b0};
     parameter ADDI = {6'b0, 1'b1, 16'b0};
     parameter SLTI = {7'b0, 1'b1, 15'b0};
     parameter XORI = {8'b0, 1'b1, 14'b0};
@@ -51,88 +49,88 @@ module HW3(clk,
     parameter B_FORMAT = 5'b00010;
     parameter J_FORMAT = 5'b00001;
 
-    always @(*) begin
-            mem_addr_reg = mem_addr_I + 1'b1;
+always @(*) begin
+            // mem_addr_I = mem_addr_I + 1'b1;
 
             case (mem_rdata_I[6:0]) // opcode
                 7'b1101111: begin // UJ type
-                    instruction_format_reg = J_FORMAT;
-                    instruction_type_reg = JAL; // JAL
+                    instruction_format = J_FORMAT;
+                    instruction_type = JAL;
                 end
 
                 7'b1100111: begin // I type
-                    instruction_format_reg = I_FORMAT;
-                    instruction_type_reg = JALR;// JALR
+                    instruction_format = I_FORMAT;
+                    instruction_type = JALR;
                 end
 
                 7'b1100011: begin // SB type
-                    instruction_format_reg = B_FORMAT;
+                    instruction_format = B_FORMAT;
                     case (func3)
                         3'b000:
-                            instruction_type_reg = BEQ; // BEQ
+                            instruction_type = BEQ;
                         3'b001:
-                            instruction_type_reg = BNE; // BNE
+                            instruction_type = BNE;
                         default:
-                            instruction_type_reg = NONE_TYPE;
+                            instruction_type = NONE_TYPE;
                     endcase
                 end
 
                 7'b0000011: begin // I type
-                    instruction_format_reg = I_FORMAT;
+                    instruction_format = I_FORMAT;
                     case (func3)
                         3'b011:
-                            instruction_type_reg = {4'b0, 1'b1, 18'b0}; // LD
+                            instruction_type = {4'b0, 1'b1, 18'b0}; // LD
                         default:
-                            instruction_type_reg = NONE_TYPE;
+                            instruction_type = NONE_TYPE;
                     endcase
                 end
 
                 7'b0100011: begin // S type
-                    instruction_format_reg = S_FORMAT;
+                    instruction_format = S_FORMAT;
                     case (func3)
                         3'b011: 
-                            instruction_type_reg = {5'b0, 1'b1, 17'b0}; // SD
+                            instruction_type = {5'b0, 1'b1, 17'b0}; // SD
                         default:
-                            instruction_type_reg = NONE_TYPE;
+                            instruction_type = NONE_TYPE;
                     endcase
                 end
 
                 7'b0010011: begin // I type
                     case (func3)
                         3'b000:
-                        instruction_type_reg = ADDI; // ADDI
+                        instruction_type = ADDI;
                         3'b010:
-                        instruction_type_reg = SLTI; // SLTI
+                        instruction_type = SLTI;
                         3'b100:
-                        instruction_type_reg = XORI; // XORI
+                        instruction_type = XORI;
                         3'b110:
-                        instruction_type_reg = ORI; // ORI
+                        instruction_type = ORI;
                         3'b111: 
-                        instruction_type_reg = ANDI; // ANDI
+                        instruction_type = ANDI;
                         3'b001:
                         case (func7)
                             7'b0: 
-                                instruction_type_reg = SLLI; // SLLI
+                                instruction_type = SLLI;
                             default:
-                                instruction_type_reg = NONE_TYPE;
+                                instruction_type = NONE_TYPE;
                         endcase
 
                         3'b101:
                         case (func7)
                             7'b0:
-                                instruction_type_reg = SRLI; // SRLI
+                                instruction_type = SRLI;
                             7'b0100000:
-                                instruction_type_reg = SRAI;  // SRAI
+                                instruction_type = SRAI;
                             default:
-                                instruction_type_reg = NONE_TYPE;
+                                instruction_type = NONE_TYPE;
                         endcase
 
                         default: begin
-                            instruction_format_reg = {5'bx};
-                            instruction_type_reg = {23'bx};
+                            instruction_format = {5'bx};
+                            instruction_type = {23'bx};
                         end
                     endcase
-                    instruction_format_reg = I_FORMAT;
+                    instruction_format = I_FORMAT;
                 end
 
                 7'b0110011: begin // R type
@@ -140,59 +138,56 @@ module HW3(clk,
                         3'b000:
                         case (func7)
                             7'b0:
-                                instruction_type_reg = ADD; // ADD
+                                instruction_type = ADD;
                             7'b0100000:
-                                instruction_type_reg = SUB; // SUB     
+                                instruction_type = SUB;     
                             default:
-                                instruction_type_reg = NONE_TYPE;
+                                instruction_type = NONE_TYPE;
                         
                         endcase
                         3'b001:
-                        instruction_type_reg = SLL; // SLL
+                        instruction_type = SLL;
                         3'b010:
-                        instruction_type_reg = SLT; // SLT
+                        instruction_type = SLT;
                         3'b100:
-                        instruction_type_reg = XOR; // XOR
+                        instruction_type = XOR;
                         3'b101:
                         case (func7)
                             7'b0:
-                                instruction_type_reg = SRL; // SRL
+                                instruction_type = SRL;
                             7'b0100000:
-                                instruction_type_reg = SRA; // SRA
+                                instruction_type = SRA;
                             default:
-                                instruction_type_reg = NONE_TYPE;
+                                instruction_type = NONE_TYPE;
                         endcase
                         3'b110:
-                        instruction_type_reg = OR; // OR 
+                        instruction_type = OR;
                         3'b111:
-                        instruction_type_reg = AND; // AND
+                        instruction_type = AND;
                         default: begin                    
-                            instruction_format_reg = {5'bx};
-                            instruction_type_reg = {23'bx};
+                            instruction_format = {5'bx};
+                            instruction_type = {23'bx};
                         end
                     endcase
-                    instruction_format_reg = R_FORMAT;
+                    instruction_format = R_FORMAT;
                 end
                 
                 default: begin
-                    instruction_format_reg = {5'bx};
-                    instruction_type_reg = {23'bx};
+                    instruction_format = {5'bx};
+                    instruction_type = {23'bx};
                 end
             endcase
     end
 
-
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            instruction_type <= 23'b0;
-            instruction_format <= 5'b0;
-            mem_addr_I <= 30'b0;
-        end
-        else begin  
-            instruction_format <= instruction_format_reg;
-            instruction_type <= instruction_type_reg;
-            mem_addr_I <= mem_addr_reg;
-        end
-    end
+    // always @(posedge clk or negedge rst_n) begin
+    // always @(negedge rst_n) begin
+    //     if (!rst_n) begin
+    //         instruction_type <= 23'b0;
+    //         instruction_format <= 5'b0;
+    //     end
+    //     // else begin
+            
+    //     // end
+    // end
 
 endmodule

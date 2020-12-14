@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : HW4
+Version: N-2017.09-SP2
+Date   : Mon Dec 14 02:07:32 2020
+****************************************
+
+Library(s) Used:
+
+    typical (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/typical.db)
+
+Number of ports:                          206
+Number of nets:                           514
+Number of cells:                          337
+Number of combinational cells:            260
+Number of sequential cells:                75
+Number of macros/black boxes:               0
+Number of buf/inv:                        146
+Number of references:                      37
+
+Combinational area:               2804.104778
+Buf/Inv area:                     1303.603188
+Noncombinational area:            2566.468815
+Macro/Black Box area:                0.000000
+Net Interconnect area:           34580.175201
+
+Total cell area:                  5370.573593
+Total area:                      39950.748794
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  --------------
+HW4                               5370.5736    100.0  1697.4000  2566.4688  0.0000  HW4
+add_46                             860.5818     16.0   860.5818     0.0000  0.0000  HW4_DW01_inc_0
+decoder                            246.1230      4.6   246.1230     0.0000  0.0000  HW3
+--------------------------------  ---------  -------  ---------  ---------  ------  --------------
+Total                                                 2804.1048  2566.4688  0.0000
+
+1

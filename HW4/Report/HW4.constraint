@@ -1,0 +1,13 @@
+Warning: Ignoring compile_fix_multiple_port_nets = TRUE. (UIO-60)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : HW4
+Version: N-2017.09-SP2
+Date   : Mon Dec 14 02:07:32 2020
+****************************************
+
+This design has no violated constraints.
+
+1
